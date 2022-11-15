@@ -55,3 +55,22 @@ h2 {
     background-color: white;
     margin-top: 8px;
 }
+
+.outputs {
+    display: flex;
+    margin-top: 8px;
+    flex-direction: column;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.oots {
+    text-align: center;
+    color: white;
+}

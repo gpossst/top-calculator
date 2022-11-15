@@ -2,6 +2,8 @@ const add = document.querySelector('#add');
 const subtract = document.querySelector('#subtract');
 const multiply = document.querySelector('#multiply');
 const divide = document.querySelector('#divide');
+const outputContainer = document.querySelector('.outputs')
+let outputList = document.querySelector('#output-list')
 let operator = [];
 let outputs = [];
 
@@ -30,18 +32,19 @@ function selectReturn() {
     let valueTwo = document.getElementById('box-two').value
     console.log(operator)
     if(operator[0] === 'add') {
-        let output = +valueOne + +valueTwo;
-        console.log(output);
+        outputs.unshift(+valueOne + +valueTwo);
+        console.log(outputs[0]);
     } else if (operator[0] === 'subtract') {
-        let output = +valueOne - +valueTwo;
-        console.log(output);
+        outputs.unshift(+valueOne - +valueTwo);
+        console.log(outputs[0]);
     } else if (operator[0] === 'multiply') {
-        let output = +valueOne * +valueTwo;
-        console.log(output);
+        outputs.unshift(+valueOne * +valueTwo);
+        console.log(outputs[0]);
     } else if (operator[0] === 'divide') {
-        let output = +valueOne / +valueTwo;
-        console.log(output);
+        outputs.unshift(+valueOne / +valueTwo);
+        console.log(outputs[0]);
     }
+    addOut();
 }
 
 window.addEventListener('keypress', function(e) {
@@ -49,3 +52,10 @@ window.addEventListener('keypress', function(e) {
         selectReturn();
     }
 })
+
+function addOut(oot){
+    let div = document.createElement('div');
+    div.classList.add('oots');
+    div.textContent = outputs[0];
+    outputContainer.insertBefore(div, outputContainer.firstChild);
+}
