@@ -58,7 +58,7 @@ h2 {
 
 .outputs {
     display: flex;
-    margin-top: 8px;
+    margin-top: 5px;
     flex-direction: column;
 }
 
@@ -73,4 +73,8 @@ h2 {
 .oots {
     text-align: center;
     color: white;
+}
+
+#all-outs {
+    margin-top: 5px;
 }
